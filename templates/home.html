@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %} Home Page {% endblock %}
+
+{% block content %}
+
+
+<div class="container-fluid" style="height: 100%; ">
+  <div class="row col-12">
+    <div class="row col-6 justify-content-center align-items-center">
+      <div>
+        <button id="listCeleb" type="submit" class="btn btn-outline-info btn-lg" onclick="submitCeleb()">List
+          Celeb</button>
+      </div>
+    </div>
+
+    <div class="row col-6 justify-content-center align-items-center" style="height: 7rem;">
+      <div>
+        <button type="submit" class="btn btn-outline-primary btn-lg" onclick="location.href='predict';">Demo</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="image_celeb" class="text-center">
+  <img src="/static/images/image.jpg" class="img-fluid">
+</div>
+
+<div id="list" class="container hidden">
+  <h3>Danh sách người nổi tiếng ở Việt Nam</h3>
+  <table id="example" class="display" style="width:100%">
+    <thead>
+      <tr>
+        <th>STT</th>
+        <th>Họ Tên</th>
+        <th>Thông Tin </th>
+      </tr>
+    </thead>
+  </table>
+</div>
+
+
+
+{% endblock %}
